@@ -17,21 +17,21 @@ variables:
 steps:
 - task: NuGetToolInstaller@1
 
-- task: DotNetCoreCLI@2
+- task: NuGetCommand@2
   inputs:
     command: 'restore'
-    projects: '**/*.sln'
-    feedsToUse: 'select'
+    restoreSolution: '**/*.sln'
+    feedsToUse: 'config'
 
-- task: DotNetCoreCLI@2
+- task: MSBuild@1
+  inputs:
+    solution: '**/GoogleVisionBarCodeScanner.csproj'
+
+- task: NuGetCommand@2
   inputs:
     command: 'pack'
-    packagesToPack: '**/GoogleVisionBarCodeScanner.csproj'
-    versioningScheme: 'byPrereleaseNumber'
-    majorVersion: '1'
-    minorVersion: '0'
-    patchVersion: '0'
-    arguments: '--configuration Release'
+    packagesToPack: '**/*.csproj'
+    versioningScheme: 'byBuildNumber'
 
 - task: NuGetCommand@2
   inputs:
