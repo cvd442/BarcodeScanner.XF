@@ -30,6 +30,6 @@ steps:
 - task: NuGetCommand@2
   inputs:
     command: 'push'
-    packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg'
+    packagesToPush: '**/BarcodeScanner.XF*.nupkg;'
     nuGetFeedType: 'internal'
     publishVstsFeed: 'a3e2565c-9d08-43e6-9d0d-5095e46b96d4/0ce51b1a-eb79-4e33-8865-180308873bf5'
