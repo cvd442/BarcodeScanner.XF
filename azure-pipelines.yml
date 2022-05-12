@@ -21,20 +21,6 @@ steps:
   inputs:
     restoreSolution: '$(solution)'
 
-- task: MSBuild@1
-  inputs:
-    solution: '**/GoogleVisionBarCodeScanner.csproj'
-    configuration: 'Release'
-
-- task: NuGetCommand@2
-  inputs:
-    command: 'pack'
-    packagesToPack: '**/GoogleVisionBarCodeScanner.csproj'
-    versioningScheme: 'byPrereleaseNumber'
-    majorVersion: '1'
-    minorVersion: '0'
-    patchVersion: '0'
-
 - task: NuGetCommand@2
   inputs:
     command: 'push'
