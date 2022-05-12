@@ -27,8 +27,11 @@ steps:
   inputs:
     command: 'pack'
     packagesToPack: '**/GoogleVisionBarCodeScanner.csproj'
-    versioningScheme: 'off'
-    buildProperties: '--configuration Release'
+    versioningScheme: 'byPrereleaseNumber'
+    majorVersion: '1'
+    minorVersion: '0'
+    patchVersion: '0'
+    arguments: '--configuration Release'
 
 - task: NuGetCommand@2
   inputs:
