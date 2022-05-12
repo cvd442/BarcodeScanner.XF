@@ -11,9 +11,9 @@
 		<RootNamespace>GoogleVisionBarCodeScanner</RootNamespace>
 
 		<Product></Product>
-		<AssemblyVersion>6.2.1.6.1</AssemblyVersion>
-		<AssemblyFileVersion>6.2.1.6.1</AssemblyFileVersion>
-		<Version>6.2.1.6.1-pre</Version>
+		<AssemblyVersion>6.2.1.6</AssemblyVersion>
+		<AssemblyFileVersion>6.2.1.6</AssemblyFileVersion>
+		<Version>6.2.1.6_kyk-pre</Version>
 		<NeutralLanguage>en</NeutralLanguage>
 
 
