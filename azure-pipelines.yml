@@ -20,6 +20,12 @@ steps:
 - task: NuGetCommand@2
   inputs:
     restoreSolution: '$(solution)'
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'pack'
+    packagesToPack: '**/GoogleVisionBarCodeScanner.csproj'
+    versioningScheme: 'off'
+    buildProperties: '--configuration Release'
 
 - task: NuGetCommand@2
   inputs:
